@@ -89,6 +89,7 @@ void show()
     }
     else
     {
+        printf("Elements are:\n");
         for(i=front;i<=rear;i++)
         {
             printf("%d\n",q[i]);
