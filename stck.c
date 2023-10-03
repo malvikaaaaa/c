@@ -69,6 +69,7 @@ void show()
     }
     else
     {
+        printf("Elements are:\n");
         for(i=top;i>=0;i--)
         {
             printf("%d\n",s[i]);
