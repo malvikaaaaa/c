@@ -53,7 +53,8 @@ void pop()
         printf("Stack is Underflow\n");
     }
     else
-    {   item=s[top];
+    {   
+        item=s[top];
         top--;
         printf("%d deleted\n",item);
     }
