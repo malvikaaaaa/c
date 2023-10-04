@@ -22,7 +22,6 @@ struct node
 void main()
 {
 	int ch;
-	clrscr();
 	printf("Enter the size of list\n");
 	scanf("%d",&n);
 	createlist(n);
@@ -137,7 +136,7 @@ void insert_first()
 		newnode->data=data;
 		newnode->next=head;
 		head=newnode;
-		printf("Node inserted\n")
+		printf("Node inserted\n");
 	}
 }
 
@@ -199,7 +198,7 @@ void insert_pos()
 		newnode->next=curr->next;
 		curr->next=newnode;
 
-		printf("node inserted\n")
+		printf("node inserted\n");
 	}
 }
 
@@ -223,14 +222,106 @@ void delete_first()
 
 void delete_last()
 {
-	struct node *lastnod,*prev;
+	struct node *lastnode,*prev;
 	if(head==NULL)
 		printf("\nNo element to delete\n\n");
 
 	else if(head->next==NULL)
 	{
 		n--;
+		printf("\nThe node deleted is %d\n\n",head->data);
+		head=NULL;
+	}
+	else
+	{
+	    n--;
+	    lastnode=head;
+	    while(lastnode->next!=NULL)
+	    {
+	        prev=lastnode;
+	        lastnode=lastnode->next;
+	    }
+	    prev->next=NULL;
+	    printf("\nThe node deleted is %d\n\n",lastnode->data);
+	}
+}
 
+void delete_pos()
+{
+    struct node *curr,*prev;
+    int pos,i;
+    
+    printf("Enter the position to be deleted\n");
+    scanf("%d",&pos);
+    
+    if(pos<0||pos>n)
+        printf("Invalid Position\n");
+    
+    else if(pos==1)
+        delete_first();
+    
+    else if(pos==n)
+    {
+        delete_last();
+    }
+    
+    else
+    {
+        n--;
+        curr=head;
+        for(i=1;i<pos;++i)
+        {
+            prev=curr;
+            curr=curr->next;
+        }
+        prev->next=curr->next;
+        printf("\nThe node deleted is %d\n\n",curr->data);
+    }
+}
+
+void search()
+{
+    struct node *curr;
+    int value,pos,flag;
+    
+    printf("Enter the value to be searched\n");
+    scanf("%d",&value);
+    
+    if(head==NULL)
+        printf("List Empty\n");
+    
+    else if(head->next==NULL)
+    {
+        if(head->data==value)
+            printf("Node found at position 1\n");
+        
+        else
+            printf("Node not found\n");
+    }
+    else
+    {
+        curr=head;
+        pos=0;
+        flag=0;
+        
+        while(curr!=NULL)
+        {
+            pos++;
+            if(curr->data==value)
+            {
+                printf("Node found at position %d\n",pos);
+                flag=1;
+                break;
+            }
+            else
+            {
+                curr=curr->next;
+            }
+        }
+        if(flag==0)
+            printf("Node not found\n");
+    }
+}
 
 
 
