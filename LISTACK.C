@@ -21,7 +21,7 @@ void main()
     do
     {
 
-	printf("SELECT\n1.PUSH\n2.POP\n3.Display\n4.Exit\n");
+	printf("SELECT\n1.PUSH\n2.POP\n3.Display\n4.Exit\nEnter your choice:");
 	scanf("%d", &ch);
 
 	switch (ch)
