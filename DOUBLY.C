@@ -147,7 +147,7 @@ void insert_pos()
 			curr=head;
 			pos--;
 
-			for(i=0;i<pos-1;++i)
+			for(i=0;i<pos-1;i++)
 			{
 				curr=curr->next;
 			}
@@ -239,7 +239,7 @@ void delete_pos()
 	{
 		curr=head;
 
-		for(i=0;i<pos-1;++i)
+		for(i=0;i<pos-1;i++)
 		{
 			prev=curr;
 			curr=curr->next;
