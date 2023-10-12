@@ -75,7 +75,7 @@ void createlist(int n)
 
 	curr=head;
 
-	for(i=1;i<n;++i)
+	for(i=1;i<n;i++)
 	{
 		printf("enter the node %d\n",i+1);
 		scanf("%d",&data);
@@ -269,7 +269,7 @@ void delete_pos()
     {
         n--;
         curr=head;
-        for(i=1;i<pos;++i)
+        for(i=1;i<pos;i++)
         {
             prev=curr;
             curr=curr->next;
