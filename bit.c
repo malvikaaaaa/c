@@ -19,7 +19,7 @@ int main()
    printf("\n Bit Representation of Universal set \n");
    for(i=0;i<n;i++)
    {
-    printf("%d\t",bit_u[i]);
+	printf("%d\t",bit_u[i]);
    }
    printf("\n");
    for(i=0;i<n;i++)
@@ -29,8 +29,8 @@ int main()
      {
        if(a[j]==u[i])
        {
-       t=1;
-       break;
+	t=1;
+	break;
        }
      }
      if(t==1)
@@ -45,7 +45,7 @@ int main()
    printf("The bit representation of set A \n");
    for(i=0;i<n;i++)
    {
-   printf("%d\t",bit_a[i]);
+	printf("%d\t",bit_a[i]);
    }
    printf("\n");
 
@@ -56,8 +56,8 @@ int main()
      {
        if(b[j]==u[i])
        {
-       t=1;
-       break;
+	t=1;
+	break;
        }
      }
      if(t==1)
@@ -72,62 +72,62 @@ int main()
    printf("The bit representation of set B \n");
    for(i=0;i<n;i++)
    {
-   printf("%d\t",bit_b[i]);
+	printf("%d\t",bit_b[i]);
    }
    printf("\n");
 
    for(i=0;i<n;i++)
    {
-   if(bit_a[i]==1 || bit_b[i]==1)
-   {
-   union_set[i]=1;
-   }
-   else
-   {
-   union_set[i]=0;
-   }
+	if(bit_a[i]==1 || bit_b[i]==1)
+	{
+		union_set[i]=1;
+	}
+	else
+	{
+		union_set[i]=0;
+	}
    }
    printf("\n Set of A Union B is \n");
    for(i=0;i<n;i++)
    {
-     printf("%d\t",union_set[i]);
+	printf("%d\t",union_set[i]);
    }
    printf("\n");
 
    for(i=0;i<n;i++)
    {
-   if(bit_a[i]==1 && bit_b[i]==1)
-   {
-   intersect_set[i]=1;
-   }
-   else
-   {
-   intersect_set[i]=0;
-   }
+	if(bit_a[i]==1 && bit_b[i]==1)
+	{
+		intersect_set[i]=1;
+	}
+	else
+	{
+		intersect_set[i]=0;
+	}
    }
    printf("\n Set of A intersect B is \n");
    for(i=0;i<n;i++)
    {
-     printf("%d\t",intersect_set[i]);
+	printf("%d\t",intersect_set[i]);
    }
    printf("\n");
 
    for(i=0;i<n;i++)
    {
-   if(bit_a[i]==1 && bit_b[i]==0)
-   {
-   differ_a[i]=1;
-   }
-   else
-   {
-   differ_a[i]=0;
-   }
+	if(bit_a[i]==1 && bit_b[i]==0)
+	{
+		differ_a[i]=1;
+	}
+	else
+	{
+		differ_a[i]=0;
+	}
    }
    printf("\n Set of A - B is \n");
    for(i=0;i<n;i++)
    {
-     printf("%d\t",differ_a[i]);
+	printf("%d\t",differ_a[i]);
    }
    printf("\n");
-getch();
+return 0;
 }
