@@ -23,7 +23,7 @@ void main()
 
 	do
 	{
-		printf("\nSELECT\n1.Insert\n2.Delete\n3.Search\n4.Preorder Display\n5.Inorder Display\n6.Postorder Display\n7.Exit\n");
+		printf("\nSELECT\n1.Insert\n2.Delete\n3.Search\n4.Preorder Display\n5.Inorder Display\n6.Postorder Display\n7.Exit\nEnter your choice:");
 		scanf("%d", &ch);
 
 		switch (ch)
@@ -245,9 +245,11 @@ struct node *delete(struct node *root, int value)
 
 }
 
-struct node* minValueNode(struct node *curr){
+struct node* minValueNode(struct node *curr)
+{
 
-	while(curr->left!=NULL){
+	while(curr->left!=NULL)
+	{
 		curr=curr->left;
 	} 
 	return curr;
