@@ -30,32 +30,32 @@ void main()
 		{
 		case 1:
 			insert();
-			continue;
+			break;
 
 		case 2:
 			printf("Enter the value to be deleted\n");
 			scanf("%d",&value);
 			delete(root,value);
-			continue;
+			break;
 
 		case 3:
 			search();
-			continue;
+			break;
 
 		case 4:
 			printf("The preorder traversal is ");
 			preorder(root);
-			continue;
+			break;
 
 		case 5:
 			printf("The inorder traversal is ");
 			inorder(root);
-			continue;
+			break;
 
 		case 6:
 			printf("The postorder traversal is ");
 			postorder(root);
-			continue;
+			break;
 
 		default:
 			exit(0);
