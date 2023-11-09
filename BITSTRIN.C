@@ -1,26 +1,29 @@
 #include <stdio.h>
 #include <conio.h>
 
-void main(){
+void main()
+{
 	int setU[10],setA[10],setB[10],unionAB[10],intersection[10],diffAB[10],diffBA[10],i,j,flag;
 	int u[10]={1,2,3,4,5,6,7};
 	int a[10]={2,3,4};
 	int b[10]={3,4,5,6};
 	clrscr();
 
-	for(i=0;i<7;++i){
+	for(i=0;i<7;i++)
+	{
 		setU[i]=1;
 	}
 	printf("Universal bit set\n    	");
-	for(i=0;i<7;++i){
+	for(i=0;i<7;i++)
+	{
 		printf("%d ",setU[i]);
 	}
 
 	//set A
-	for(i=0;i<7;++i)
+	for(i=0;i<7;i++)
 	{
 		flag=0;
-		for(j=0;j<7;++j)
+		for(j=0;j<7;j++)
 		{
 
 			if(u[i]==a[j])
@@ -29,17 +32,17 @@ void main(){
 				break;
 			}
 		}
-			if(flag==1)
-			{
-				setA[i]=1;
-			}
-			else
-			{
-				setA[i]=0;
-			}
+		if(flag==1)
+		{
+			setA[i]=1;
 		}
+		else
+		{
+			setA[i]=0;
+		}
+	}
 	printf("\nBit set A\n	   ");
-	for(i=0;i<7;++i)
+	for(i=0;i<7;i++)
 	{
 		printf("%d ",setA[i]);
 	}
@@ -48,7 +51,7 @@ void main(){
 	for(i=0;i<7;++i)
 	{
 		flag=0;
-		for(j=0;j<7;++j)
+		for(j=0;j<7;j++)
 		{
 
 			if(u[i]==b[j])
@@ -57,18 +60,18 @@ void main(){
 				break;
 			}
 		}
-			if(flag==1)
-			{
-				setB[i]=1;
-			}
-			else
-			{
-				setB[i]=0;
-			}
+		if(flag==1)
+		{
+			setB[i]=1;
 		}
+		else
+		{
+			setB[i]=0;
+		}
+	}
 
 	printf("\nBit set B\n	   ");
-	for(i=0;i<7;++i)
+	for(i=0;i<7;i++)
 	{
 		printf("%d ",setB[i]);
 	}
@@ -76,7 +79,7 @@ void main(){
 	//Union of A and B
 
 	printf("\nUnion of A and B\n	   ");
-	for(i=0;i<7;++i)
+	for(i=0;i<7;i++)
 	{
 		unionAB[i]=setA[i]|setB[i];
 		printf("%d ",unionAB[i]);
@@ -84,7 +87,7 @@ void main(){
 
 	//Intersection of A and B
 	printf("\nIntersection of A and B\n	   ");
-	for(i=0;i<7;++i)
+	for(i=0;i<7;i++)
 	{
 		intersection[i]=setA[i]&setB[i];
 		printf("%d ",intersection[i]);
@@ -92,7 +95,7 @@ void main(){
 
 	//Difference of A and B
 	printf("\nDifference  A - B\n	   ");
-	for(i=0;i<7;++i)
+	for(i=0;i<7;i++)
 	{
 		if(setA[i]==1 && setB[i]==0)
 		{
@@ -108,7 +111,7 @@ void main(){
 
 	//Difference of B and A
 	printf("\nDifference  B - A\n	   ");
-	for(i=0;i<7;++i)
+	for(i=0;i<7;i++)
 	{
 		if(setB[i]==1 && setA[i]==0)
 		{
@@ -121,9 +124,6 @@ void main(){
 		printf("%d ",diffBA[i]);
 	}
 
-
-
-
-	getch();
+getch();
 
 }
