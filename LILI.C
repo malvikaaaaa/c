@@ -33,21 +33,21 @@ void main()
 		{
 		case 1:	insert_first();
 			printf("%d",n);
-			continue;
+			break;
 		case 2:	insert_last();
-			continue;
+			break;
 		case 3:	insert_pos();
-			continue;
+			break;
 		case 4: delete_first();
-			continue;
+			break;
 		case 5: delete_last();
-			continue;
+			break;
 		case 6: delete_pos();
-			continue;
+			break;
 		case 7: search();
-			continue;
+			break;
 		case 8: display();
-			continue;
+			break;
 		default:
 			exit(0);
 		}
