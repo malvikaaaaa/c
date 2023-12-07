@@ -61,7 +61,7 @@ void dfs() {
 	}
     }
 
-    printf("\nPopping Order from Stack: ");
+    printf("\nTraversing Order from Stack: ");
     for (i = p - 1; i >= 0; i--) {
 	printf("%d ", popped[i]); // Print elements in popping order
     }
