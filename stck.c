@@ -6,9 +6,10 @@ int s[10],top=-1,n;
 void main()
 {
     int c;
+    clrscr();
     printf("Enter the size of stack<=100:");
     scanf("%d",&n);
-    while(1)
+    do
     {
         printf("Menu\n");
         printf("1.Push\n2.Pop\n3.Display\n4.Exit\nEnter your Choice:");
@@ -24,7 +25,7 @@ void main()
             case 4: exit(0);
             default: printf("Invalid Choice");
         }
-    }
+    } while(c!=0);
 getch();
 }
 
