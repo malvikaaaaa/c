@@ -8,28 +8,36 @@ void main()
 	int a[10]={2,3,4};
 	int b[10]={3,4,5,6}; */
 	clrscr();
+	
 	printf("\nEnter the no:of elements in universal set:");
 	scanf("%d",&n);
-	printf("\nEnter the no:of elements in set a:");
-	scanf("%d",&m);
-	printf("\nEnter the no:of elements in set b:");
-	scanf("%d",&p);
-
+	
 	printf("\nEnter universal set:");
 	for(i=0;i<n;i++)
 	{
 		scanf("%d",&u[i]);
 	}
+	
+	
+	printf("\nEnter the no:of elements in set a:");
+	scanf("%d",&m);
+	
 	printf("\nEnter set a elements");
 	for(i=0;i<m;i++)
 	{
 		scanf("%d",&a[i]);
 	}
+	
+	
+	printf("\nEnter the no:of elements in set b:");
+	scanf("%d",&p);
+
 	printf("\nEnter set b elements");
 	for(i=0;i<p;i++)
 	{
 		scanf("%d",&b[i]);
 	}
+
 
 	for(i=0;i<n;i++)
 	{
