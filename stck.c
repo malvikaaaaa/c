@@ -3,7 +3,7 @@ void push();
 void pop();
 void show();
 int s[10],top=-1,n;
-int main()
+void main()
 {
     int c;
     printf("Enter the size of stack<=100:");
@@ -21,11 +21,11 @@ int main()
                     break;
             case 3: show();
                     break;
-            case 4: return 0;
+            case 4: exit(0);
             default: printf("Invalid Choice");
         }
     }
-return 0;
+getch();
 }
 
 void push()
