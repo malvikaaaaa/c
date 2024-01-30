@@ -3,27 +3,49 @@
 
 void main()
 {
-	int setU[10],setA[10],setB[10],unionAB[10],intersection[10],diffAB[10],diffBA[10],i,j,flag;
-	int u[10]={1,2,3,4,5,6,7};
+	int setU[10],setA[10],setB[10],unionAB[10],intersection[10],diffAB[10],diffBA[10],i,j,flag,m,n,p,u[10],a[10],b[10];
+       /*	int u[10]={1,2,3,4,5,6,7};
 	int a[10]={2,3,4};
-	int b[10]={3,4,5,6};
+	int b[10]={3,4,5,6}; */
 	clrscr();
+	printf("\nEnter the no:of elements in universal set:");
+	scanf("%d",&n);
+	printf("\nEnter the no:of elements in set a:");
+	scanf("%d",&m);
+	printf("\nEnter the no:of elements in set b:");
+	scanf("%d",&p);
 
-	for(i=0;i<7;i++)
+	printf("\nEnter universal set:");
+	for(i=0;i<n;i++)
+	{
+		scanf("%d",&u[i]);
+	}
+	printf("\nEnter set a elements");
+	for(i=0;i<m;i++)
+	{
+		scanf("%d",&a[i]);
+	}
+	printf("\nEnter set b elements");
+	for(i=0;i<p;i++)
+	{
+		scanf("%d",&b[i]);
+	}
+
+	for(i=0;i<n;i++)
 	{
 		setU[i]=1;
 	}
 	printf("Universal bit set\n    	");
-	for(i=0;i<7;i++)
+	for(i=0;i<n;i++)
 	{
 		printf("%d ",setU[i]);
 	}
 
 	//set A
-	for(i=0;i<7;i++)
+	for(i=0;i<n;i++)
 	{
 		flag=0;
-		for(j=0;j<7;j++)
+		for(j=0;j<n;j++)
 		{
 
 			if(u[i]==a[j])
@@ -42,16 +64,16 @@ void main()
 		}
 	}
 	printf("\nBit set A\n	   ");
-	for(i=0;i<7;i++)
+	for(i=0;i<n;i++)
 	{
 		printf("%d ",setA[i]);
 	}
 
 	//set B
-	for(i=0;i<7;++i)
+	for(i=0;i<n;++i)
 	{
 		flag=0;
-		for(j=0;j<7;j++)
+		for(j=0;j<n;j++)
 		{
 
 			if(u[i]==b[j])
@@ -71,7 +93,7 @@ void main()
 	}
 
 	printf("\nBit set B\n	   ");
-	for(i=0;i<7;i++)
+	for(i=0;i<n;i++)
 	{
 		printf("%d ",setB[i]);
 	}
@@ -79,7 +101,7 @@ void main()
 	//Union of A and B
 
 	printf("\nUnion of A and B\n	   ");
-	for(i=0;i<7;i++)
+	for(i=0;i<n;i++)
 	{
 		unionAB[i]=setA[i]|setB[i];
 		printf("%d ",unionAB[i]);
@@ -87,7 +109,7 @@ void main()
 
 	//Intersection of A and B
 	printf("\nIntersection of A and B\n	   ");
-	for(i=0;i<7;i++)
+	for(i=0;i<n;i++)
 	{
 		intersection[i]=setA[i]&setB[i];
 		printf("%d ",intersection[i]);
@@ -95,7 +117,7 @@ void main()
 
 	//Difference of A and B
 	printf("\nDifference  A - B\n	   ");
-	for(i=0;i<7;i++)
+	for(i=0;i<n;i++)
 	{
 		if(setA[i]==1 && setB[i]==0)
 		{
@@ -111,7 +133,7 @@ void main()
 
 	//Difference of B and A
 	printf("\nDifference  B - A\n	   ");
-	for(i=0;i<7;i++)
+	for(i=0;i<n;i++)
 	{
 		if(setB[i]==1 && setA[i]==0)
 		{
