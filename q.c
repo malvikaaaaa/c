@@ -3,12 +3,12 @@ void ins();
 void del();
 void show();
 int q[10],rear=-1,front=-1,n;
-int main()
+void main()
 {
     int c;
     printf("Enter the size of queue<=100:");
     scanf("%d",&n);
-    while(1)
+    do
     {
         printf("Menu\n");
         printf("1.Insert\n2.Delete\n3.Display\n4.Exit\nEnter your Choice:");
@@ -21,11 +21,11 @@ int main()
                     break;
             case 3: show();
                     break;
-            case 4: return 0;
+            case 4: exit(0);
             default: printf("Invalid Choice");
         }
-    }
-return 0;
+    } while(c!=0);
+getch();
 }
 
 void ins()
